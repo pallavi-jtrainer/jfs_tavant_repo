@@ -1,0 +1,20 @@
+package mainpkg;
+
+public class Studnet {
+	private int id;
+	private String firstName;
+	private String lastName;
+	private int age;
+	
+	public void acceptData(int id, String fn, String ln, int age) {
+		this.id = id;
+		this.firstName = fn;
+		lastName = ln;
+		this.age = age;
+	}
+	
+	public void showData() {
+		System.out.println(id + " " + firstName + " " + lastName);
+	}
+	
+}

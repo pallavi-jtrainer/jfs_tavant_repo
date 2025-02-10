@@ -1,0 +1,11 @@
+package mainpkg;
+
+public class OuterClass {
+	private String greet = "Hello";
+	
+	public class InnerClass {
+		public void sayHello() {
+			System.out.println(greet);
+		}
+	}
+}

@@ -1,0 +1,11 @@
+package mainpkg;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Studnet s = new Studnet();
+		s.acceptData(1, "Pallavi", "Prasad", 18);
+		s.showData();
+	}
+
+}
