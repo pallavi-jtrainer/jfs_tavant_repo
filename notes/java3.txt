@@ -1,0 +1,64 @@
+Constructor
+ -> special method used to create an object
+ -> characteristics:
+    -> have the class name
+    -> does not have a return type
+    -> can be overloaded
+    -> almost always public
+ -> types:
+    -> default constructor
+    -> parameterized constructor
+
+----------------------------------------------------------------
+Polymorphism -> many forms
+2 types:
+  -> static polymorphism / compile time
+  -> dynamic polymorphism / runtime
+
+1. Static polymorphism -> changing the way a method works inside the same class 
+  -> Overloading
+  	-> the parameter / argument list is changed of a method
+        -> method name stays the same  
+
+2. Dynamic polymorphism -> child class changes the implementation of a parent class method
+  -> Overriding
+  	-> the method signature and the name stay the same as the parent class method
+
+
+-------------------------------------------------------------
+Inheritance 
+  -> one class gives its properties and methods to another class
+  -> IS-A relationship
+base class/ parent class/ super class <- derived class/ child class/ sub class
+  ->private variables and private methods are not inherited.
+
+-> types:
+1. single -- 1 parent and 1 child
+2. multiple -- not with classes, works with interfaces
+3. multilevel -- 1 grandparent <- 1 parent <- 1 child
+4. hierarchical
+5. hybrid -- not in java
+
+------------------------------------------------------------------
+protected access specifier:
+  -> any variable/ method declared as protected is private to the class
+  -> accessible in the same package 
+  -> can be accessed in the sub classes
+
+------------------------------------------------------------------
+abstract class
+  -> cannot be instantiated
+  -> can be used only through inheritance
+  -> can have both concrete and abstract methods
+
+abstract method
+  -> can be written only in an abstract class
+  -> mandatorily should be implemented in the sub classes
+  -> cannot have a body in the abstract class
+
+interfaces (implements)
+  -> pure abstract / fully abstract class
+  -> all methods are abstract
+  -> cannot be instantiated
+  -> cannot have concrete methods
+  -> the methods must be implemented in the derived class

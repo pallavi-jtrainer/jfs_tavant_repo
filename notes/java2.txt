@@ -1,0 +1,84 @@
+Control Statements:
+if else
+switch - case
+for
+for each / extended for
+while
+do while
+
+Classes
+Objects
+constructor
+Inheritance
+   single
+   abstract classes
+----------------------------------------------------
+?:
+
+if(condition){
+	System.out.println();
+} else {
+   statement;
+}
+
+val = (condition)?true:false;
+
+---------------------------------------------------------------
+Keywords
+class, new, public, private, int, boolean, String, protected, default, abstract, continue, goto, break, switch, case, if, else, float, static, final, try, catch, finally, throw, throws, double, this, byte, do, while, enum, long, short, extends, implements, interface, for, import, instanceof, null, return, package, super, synchronized, volatile, transient, void
+
+---------------------------------------------------------------
+Getters and Setters:
+ getters -> retrieve values from private variables
+ setters -> put values into private variables
+
+ private String name;
+
+ public final String getName() {
+   return name;
+ }
+
+ public final void setName(final String argName) {
+    this.name = argName;
+ } 
+-----------------------------------------------------------
+constructor -> special method which creates an object for a particular class
+1. does not have a return type
+2. is always the name of the class
+3. can be parameterized
+4. nearly always public 
+
+default constructor
+parameterized constructor
+
+----------------------------------------------------------------
+inheritance -> when one class gives its contents to another class
+   -> is - a relationship
+1. single
+  1 parent class/ super class/ base class and 1 child class/ sub class/ derived class
+2. multiple
+  more than 1 parent and 1 child class
+3. multilevel
+   grandparent -> parent -> child
+4. hierarchical
+   inverted tree
+5. hybrid
+
+Abstract class and Pure abstract class (Interface)
+
+Abstract class
+  -> has the kyword abstract
+  -> cannot be instantiated
+  -> variables, abstract and concrete methods in it.
+
+
+Polymorphism -> many forms
+
+Overriding 
+  -> when a child class provides implementation to a parent class method -> Dynamic Polymorphism/runtime polymorphism
+  -> always across classes.
+
+Overloading -> the same class provides a different implementation to its method 
+
+
+
