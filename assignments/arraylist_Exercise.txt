@@ -1,0 +1,15 @@
+create a class Student with the following fields:
+studentId, firstName, lastName and age
+
+Add methods to perform CRUD operations. Add validations like:
+1. studentId has to be unique
+2. each student should have a course assigned
+3. one course per student only
+4. course should exist in the list of courses
+
+Create a class called Courses with the following fields:
+coursed, courseName
+Add methods to view all courses and view a course details
+
+Connect the 2 classes
+

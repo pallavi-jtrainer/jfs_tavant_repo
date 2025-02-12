@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import collectionspkg.CollectionsDemo;
 import exceptionspkg.ExceptionDemo;
+import exceptionspkg.InvalidAgeException;
 
 public class MainClass {
 
@@ -24,12 +25,16 @@ public class MainClass {
 		ExceptionDemo demo = new ExceptionDemo();
 		try {
 //			demo.exception2(arr);
-			demo.writeAndReadFromFile();
-		} catch(ArrayIndexOutOfBoundsException ex) {
+//			demo.writeAndReadFromFile();
+			demo.checkAge(15);
+		} catch(ArrayIndexOutOfBoundsException | InvalidAgeException  ex) {
 			System.out.println(ex.getMessage());
-		} catch (IOException e) {
-			System.out.println(e.getMessage());
+		} finally {
+			System.out.println("Executed everytime");
 		}
+//		} catch (IOException e) {
+//			System.out.println(e.getMessage());
+//		}
 		
 //		try {
 //			demo.divide(1, 0);
