@@ -13,10 +13,10 @@ public class MainClass {
 //		}
 		
 		
-		Student students[] = new Student[5];
-//		System.out.println(students[0]);
-		students[0] = new Student();
-		students[0].showData();
+//		Student students[] = new Student[5];
+////		System.out.println(students[0]);
+//		students[0] = new Student();
+//		students[0].showData();
 //		Student s = new Student();
 //		s.showData();
 		
@@ -35,7 +35,8 @@ public class MainClass {
 		OuterClass.InnerClass ic = ou.new InnerClass();
 		ic.sayHello();
 		
-		
+		OuterClass.StaticInnerClass sc = new OuterClass.StaticInnerClass();
+		sc.staticMethod();
 		
 		//e.id = 101;
 		

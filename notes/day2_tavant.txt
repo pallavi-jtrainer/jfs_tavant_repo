@@ -1,0 +1,47 @@
+inheritance
+overriding
+final - method, class
+composition 
+aggregation
+collections
+abstract classes and methods
+interface and functional interfaces
+lambda expressions
+-----------------------------------------------------
+Abstract classes - classes which cannot be instantiated
+can have both concrete and abstract methods
+constructors are unnecessary
+
+Interfaces
+fully abstract classes
+methods in an interface are by default abstract
+cannot be instantiated
+
+
+An interface with only one abstract method -> functional interface
+we can have static and default methods inside a functional interface
+
+
+Final - constant, cannot be changed
+-variables 
+	on spot initialize
+	constructor
+	initialization block
+-methods
+	cannot be overridden
+-classes
+	cannot be inherited
+
+-----------------------------------------
+Collections:
+Iterable <- Iterator
+Collections
+List
+	ArrayList
+	LinkedList
+	Stack
+	Vector
+Map
+Set
+Queue
+

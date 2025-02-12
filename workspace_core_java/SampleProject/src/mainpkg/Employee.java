@@ -17,6 +17,10 @@ public class Employee {
 //		org = "Tavant";
 //	}
 	
+//	public void setOrg(String org) {
+//		this.org = org;
+//	}
+	
 	public String getOrg() {
 		return org;
 	}
