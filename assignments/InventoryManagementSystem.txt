@@ -1,0 +1,39 @@
+Develop an Inventory Management System using JDBC to interact with a database and implement custom exceptions to handle specific error scenarios.
+
+Requirements:
+
+Database Setup:
+
+Create a database named InventoryDB.
+
+Create a table named Products with the following columns:
+
+product_id (INT, Primary Key, Auto Increment)
+product_name (VARCHAR(100))
+category (VARCHAR(50))
+quantity (INT)
+price (DECIMAL)
+
+Java Application:
+
+Implement a Product class with properties: productId, productName, category, quantity, and price.
+
+Implement a ProductDAO (Data Access Object) class to handle database operations using JDBC. The class should include the following methods:
+
+addProduct(Product product): Adds a new product to the database.
+
+getProductById(int productId): Retrieves a product by its ID.
+
+updateProduct(Product product): Updates an existing product's details.
+
+deleteProduct(int productId): Deletes a product by its ID.
+
+updateProductQuantity(int productId, int newQuantity): Updates the quantity of a product.
+
+Custom Exceptions:
+
+Create a custom exception class named ProductNotFoundException to handle cases where a product is not found in the database.
+
+Create another custom exception class named DatabaseConnectionException to handle database connection errors.
+
+Create a custom exception class named InsufficientStockException to handle cases where there is not enough stock to fulfill a request.
