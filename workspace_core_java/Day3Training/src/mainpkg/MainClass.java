@@ -7,7 +7,10 @@ import exceptionspkg.ExceptionDemo;
 import exceptionspkg.InvalidAgeException;
 
 public class MainClass {
-
+/**
+ * 
+ * @param args
+ */
 	public static void main(String[] args) {
 //		CollectionsDemo cd = new CollectionsDemo();
 		//cd.arrayListDemo();
