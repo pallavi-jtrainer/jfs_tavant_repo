@@ -1,0 +1,1 @@
+This is data to be written into file

@@ -1,0 +1,32 @@
+Java 9:
+Private methods in interfaces
+Immutable collections
+Improvements to StreamAPI => takeWhile, dropWhile, iterate
+Optional Classes
+Try with resources
+
+Java 10
+var 
+optional
+
+Java 11
+var enhanced to work with collections
+HTTP/1 and HTTP/2
+toArray
+methods in String - strip, stripTrailing, stripLeading
+
+Java 13
+yield
+multi line strings
+
+Java 17
+sealed classes
+sealed interfaces
+
+
+---------------------------
+File IO
+1. Byte Stream
+2. Character Stream
+
+

@@ -1,0 +1,66 @@
+JDBC
+Java Database Connectivity
+
+1. register the driver => ClassNotFoundException
+2. create connection => SQLException
+3. create statements - Statement, PreparedStatement
+4. fire your statements and handle result
+5. close all resources
+
+
+Strings:
+charAt
+concat
+toLowerCase
+toUpperCase
+split
+join
+trim
+startsWith
+endsWith
+indexOf
+replace
+substring
+equals
+equalsIgnoreCase
+compareTo
+compareToIgnoreCase
+-------------------------------
+StringBuffer & StringBuilder
+-> StringBuffer - thread safe 
+-> objects are reused
+
+------------------------------
+Java 8
+1. functional interface
+2. static and default methods inside FI
+3. forEach()
+4. lambda expression to access the interface method
+5. Stream API to use with large collections of data
+6. Time API
+7. New Concurrency collections
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
