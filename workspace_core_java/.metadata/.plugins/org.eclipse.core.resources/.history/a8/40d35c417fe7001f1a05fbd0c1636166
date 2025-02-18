@@ -1,7 +1,0 @@
-package mainpkg;
-
-public class Employee {
-	protected int id;
-	String name;
-	
-}

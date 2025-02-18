@@ -1,8 +1,0 @@
-INDEX VERSION 1.134+E:\trainings\iExcel\Tavant\10thfeb25\workspace_core_java\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-2108062921.index
-1792895114.index
-2028122561.index
-3922062443.index
-3945426264.index
-82314854.index

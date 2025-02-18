@@ -4,26 +4,21 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DbConnection {
-	private static Connection con = null;
+public class DBConnection {
+	private static final String URL = "jdbc:mysql://localhost:3306/ticketbookingdb";
+	private static final String USERNAME = "root";
+	private static final String PASSWORD = "Pass1234";
 	
 	public static Connection getDbConnection() {
-//		Connection con = null;
-		
-		final String URL = "jdbc:mysql://localhost:3306/usersdb";
-		final String USERNAME = "root";
-		final String PASSWORD = "Pass1234";
-		
+		Connection con = null;
 		try {
-			//register the driver
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
-			//create connection
 			con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			System.out.println(e.getMessage());
 		}
-		
 		return con;
 	}
 }
