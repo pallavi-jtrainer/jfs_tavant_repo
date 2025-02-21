@@ -1,5 +1,8 @@
 package com.tavant.hibernate.HibernateOneToManyMapping;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.tavant.hibernate.HibernateOneToManyMapping.dao.InstructorDao;
 import com.tavant.hibernate.HibernateOneToManyMapping.entity.Course;
 import com.tavant.hibernate.HibernateOneToManyMapping.entity.Instructor;
@@ -9,16 +12,21 @@ import com.tavant.hibernate.HibernateOneToManyMapping.entity.Instructor;
  */
 public class App {
     public static void main(String[] args) {
-        Instructor instructor = new Instructor("Ins1", "ins1@ajaj.c");
+        Instructor instructor = new Instructor("Ins2", "ins2@newo.c");
         
         InstructorDao dao = new InstructorDao();
-        dao.saveInstructor(instructor);
+        //dao.saveInstructor(instructor);
         
-        Course c1 = new Course("Math", "1 month");
-        Course c2 = new Course("Physics", "1 month");
+        Course c1 = new Course("Spring Boot", "6 weeks");
+  //      Course c2 = new Course("Typescript", "1 week");
+        c1.setInstructor(instructor);
+      //  c2.setInstructor(instructor);
         
-        instructor.getCourses().add(c1);
-        instructor.getCourses().add(c2);
+        List<Course> courses = new ArrayList<Course>();
+        courses.add(c1);
+   //     courses.add(c2);
+        
+        instructor.setCourses(courses);
         
         dao.saveInstructor(instructor);
     }

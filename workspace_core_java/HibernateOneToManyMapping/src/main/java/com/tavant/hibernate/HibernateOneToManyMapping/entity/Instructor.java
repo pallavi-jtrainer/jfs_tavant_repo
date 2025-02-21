@@ -18,6 +18,7 @@ public class Instructor {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "instructor_id")
 	private int id;
 	
 	@Column(name="instructor_name", nullable=false)
@@ -26,7 +27,11 @@ public class Instructor {
 	@Column(name="email", nullable=false, unique=true)
 	private String email;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(mappedBy="instructor", cascade = { 
+			CascadeType.PERSIST, 
+			CascadeType.MERGE, 
+			CascadeType.DETACH,
+		    CascadeType.REFRESH })
 	private List<Course> courses = new ArrayList<Course>();
 	
 	public Instructor() {}
