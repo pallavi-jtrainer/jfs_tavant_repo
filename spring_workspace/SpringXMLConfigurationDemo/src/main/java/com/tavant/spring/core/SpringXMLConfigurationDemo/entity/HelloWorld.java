@@ -10,4 +10,12 @@ public class HelloWorld {
 	public String getMessage() {
 		return message;
 	}
+	
+	public void init() throws Exception {
+		System.out.println("In the init method of the bean");
+	}
+	
+	public void destroy() throws Exception {
+		System.out.println("Bean destroyed.");
+	}
 }
