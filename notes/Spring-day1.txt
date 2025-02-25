@@ -1,0 +1,42 @@
+Spring Framework:
+Java EE framework
+opensource
+
+Config files
+Xml based
+Java based
+Annotation based
+
+IOC -> Inversion Of Control
+DI -> Dependency Injection
+setter
+constructor
+field
+
+Spring containers:
+1. Initialize beans
+2. Configure the container
+3. Monitor the beans
+4. Performing Dependency injection (wiring)
+
+2 types of containers:
+1. BeanFactory
+2. ApplicationContext
+
+Spring Beans:
+Any object of a normal POJO class initialized using the spring container
+
+Scopes:
+1. singleton
+2. session
+3. global-session
+4. prototype
+5. request
+
+Bean Lifecycle
+1. Container starts
+2. Bean instantiation
+3. Dependency injection 
+4. Container calls the init()
+5. Container calls the utility methods
+6. Container calls the destroy()
