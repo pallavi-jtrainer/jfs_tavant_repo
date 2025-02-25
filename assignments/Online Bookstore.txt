@@ -1,0 +1,55 @@
+Problem Statement: Online Bookstore
+
+Description: Build an online bookstore application where users can browse, search, and purchase books. The application should follow the principles of dependency injection using Spring Core.
+
+Requirements:
+
+Book Management:
+
+Define a Book class with properties like id, title, author, price, and category.
+
+Create a BookRepository interface for basic CRUD operations.
+
+Implement a BookService class that provides business logic for managing books.
+
+User Management:
+
+Define a User class with properties like id, name, email, and password.
+
+Create a UserRepository interface for basic CRUD operations.
+
+Implement a UserService class that handles user registration, authentication, and profile management.
+
+Shopping Cart:
+
+Create a Cart class to represent a user's shopping cart.
+
+Implement methods to add, remove, and view items in the cart.
+
+Provide a CartService class to handle cart-related operations.
+
+Order Processing:
+
+Define an Order class with properties like orderId, userId, orderDate, and a list of Book objects.
+
+Create an OrderRepository interface for basic CRUD operations.
+
+Implement an OrderService class that handles order creation, viewing order history, and order cancellation.
+
+Dependency Injection:
+
+Use Spring Core's dependency injection to manage the creation and injection of service and repository beans.
+
+Configure the application context using XML or Java-based configuration.
+
+Database Integration:
+
+Integrate with a relational database (e.g., MySQL) to persist data.
+
+Use Spring JDBC or JPA for database operations.
+
+User Interface:
+
+Develop a simple user interface using Spring MVC or any other framework of your choice.
+
+Implement views for browsing books, user registration, login, cart management, and order processing.

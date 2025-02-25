@@ -14,7 +14,6 @@ BookRepository Interface:
 
 Define a BookRepository interface with methods for adding and retrieving books:
 
-java
 public interface BookRepository {
     void addBook(Book book);
     Book getBook(String isbn);
