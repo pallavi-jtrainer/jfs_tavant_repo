@@ -1,11 +1,14 @@
 package com.tavant.spring.boot.SpringBootDemo.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tavant.spring.boot.SpringBootDemo.entity.Books;
+import com.tavant.spring.boot.SpringBootDemo.exceptions.ObjectMalformedException;
+import com.tavant.spring.boot.SpringBootDemo.exceptions.ResourceNotfoundException;
 import com.tavant.spring.boot.SpringBootDemo.repository.BooksRepository;
 
 import jakarta.persistence.Transient;
@@ -21,8 +24,14 @@ public class BooksService {
 		return repo.findAll();
 	}
 	
-	public Books getBookById(int id) {
-		return repo.findByBookId(id);
+	public Books getBookById(int id) throws ResourceNotfoundException {
+		Books b = repo.findByBookId(id);
+		
+		if(b.equals(null)) {
+			throw new ResourceNotfoundException("Book with id: " + id + " not found");
+		}
+		
+		return b;
 	}
 	
 	public List<Books> listAllByTitle(String title) {
@@ -33,7 +42,14 @@ public class BooksService {
 		return repo.findAllByAuthor(author);
 	}
 	
-	public Books saveBookDetails(Books book) {
+	public List<Books> listAllByPriceBetween(double start, double end) {
+		return repo.findAllByPriceBetween(start, end);
+	}
+	
+	public Books saveBookDetails(Books book) throws ObjectMalformedException {
+		if(book.getPrice() == 0.0) {
+			throw new ObjectMalformedException("Book object not created properly. Cannot save.");
+		}
 		return repo.save(book);
 	}
 	

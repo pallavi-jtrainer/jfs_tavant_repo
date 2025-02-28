@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,11 +27,14 @@ public class Books {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int bookId;
 	
+	@NotBlank(message="Title cannot be blank")
 	@Column(name="title", nullable=false)
 	private String title;
 	
+	@NotBlank(message="Author cannot be blank")
 	@Column(name="author", nullable=false)
 	private String author;
+	
 	
 	@Column(name="release_year", nullable=false)
 	private int releaseYear;
