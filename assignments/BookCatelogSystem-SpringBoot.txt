@@ -1,0 +1,2 @@
+Book Catalog System: Problem Statement: Book enthusiasts and libraries need an easy way to catalog and manage their book collections. Keeping track of book information manually can be time-consuming and prone to errors. Objective: To develop a Spring Boot-based Book Catalog System that allows users to add, update, delete, and search for books. The system should provide RESTful APIs for managing book information and include features like pagination and filtering. Please include exceptions and validations
+
