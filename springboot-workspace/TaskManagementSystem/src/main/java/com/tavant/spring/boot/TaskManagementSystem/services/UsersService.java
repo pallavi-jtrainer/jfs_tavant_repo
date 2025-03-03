@@ -1,11 +1,13 @@
 package com.tavant.spring.boot.TaskManagementSystem.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tavant.spring.boot.TaskManagementSystem.entity.Users;
+import com.tavant.spring.boot.TaskManagementSystem.exceptions.NoContentAvailableException;
 import com.tavant.spring.boot.TaskManagementSystem.exceptions.ResourceNotFoundException;
 import com.tavant.spring.boot.TaskManagementSystem.repositories.UsersRepository;
 
@@ -14,6 +16,16 @@ public class UsersService {
 
 	@Autowired
 	private UsersRepository repo;
+	
+	public List<Users> listAll() {
+		List<Users> users = repo.findAll();
+		
+		if(users.isEmpty()) {
+			throw new NoContentAvailableException("Table is empty. Please add users!");
+		}
+		
+		return users;
+	}
 	
 	public Optional<Users> getUserById(int id) throws ResourceNotFoundException {
 		Optional<Users> user = repo.findById(id);

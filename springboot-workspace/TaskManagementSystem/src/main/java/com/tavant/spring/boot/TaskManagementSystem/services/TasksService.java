@@ -2,6 +2,7 @@ package com.tavant.spring.boot.TaskManagementSystem.services;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.tavant.spring.boot.TaskManagementSystem.entity.TaskStatus;
 import com.tavant.spring.boot.TaskManagementSystem.entity.Tasks;
 import com.tavant.spring.boot.TaskManagementSystem.exceptions.DateMismatchException;
+import com.tavant.spring.boot.TaskManagementSystem.exceptions.NoContentAvailableException;
 import com.tavant.spring.boot.TaskManagementSystem.exceptions.ResourceNotFoundException;
 import com.tavant.spring.boot.TaskManagementSystem.repositories.TasksRepository;
 
@@ -22,7 +24,7 @@ public class TasksService {
 		return repo.findAll();
 	}
 	
-	public List<Tasks> listAllTasksByUserId(int id) {
+	public List<Tasks> listAllTasksByUserId(int id) throws NoContentAvailableException{
 		return repo.findAllByUserId(id);
 	}
 	
@@ -42,8 +44,8 @@ public class TasksService {
 		return repo.findAllByStatus(status);
 	}
 	
-	public Tasks retrieveById(int id) throws ResourceNotFoundException {
-		Tasks t = repo.findById(id).get();
+	public Optional<Tasks> retrieveById(int id) throws ResourceNotFoundException {
+		Optional<Tasks> t = repo.findById(id);
 		
 		if(t == null) {
 			throw new ResourceNotFoundException("Task with id: " + id + " not found");
