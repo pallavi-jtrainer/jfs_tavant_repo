@@ -3,6 +3,7 @@ package com.tavant.spring.boot.SpringBootDemo.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tavant.spring.boot.SpringBootDemo.entity.Books;
@@ -23,8 +25,15 @@ import com.tavant.spring.boot.SpringBootDemo.exceptions.ObjectMalformedException
 import com.tavant.spring.boot.SpringBootDemo.exceptions.ResourceNotfoundException;
 import com.tavant.spring.boot.SpringBootDemo.services.BooksService;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
+@Tag(name="Books", description = "Books API")
 //@Controller
 @RestController
 @RequestMapping("/books")
@@ -94,6 +103,7 @@ public class BooksController {
     * Rest API
     */
 	@GetMapping
+	@ResponseStatus(code = HttpStatus.OK)
 	public ResponseEntity<List<Books>> listAllBooks() {
 		List<Books> books = service.listAllBooks();
 		
@@ -103,6 +113,15 @@ public class BooksController {
 		
 		return ResponseEntity.ok().body(books);
 	}
+	
+	@Operation(
+		      summary = "Retrieve a Book by Id",
+		      description = "Get a Book object by specifying its id. The response is Book object with id, title, author, release year and price.",
+		      tags = { "Get Book By Id" })
+	@ApiResponses({
+      @ApiResponse(responseCode = "200", content = { @Content(schema = @Schema(implementation = Books.class), mediaType = "application/json")}),
+      @ApiResponse(responseCode = "404", content = { @Content(schema = @Schema()) }),
+      @ApiResponse(responseCode = "500", content = { @Content(schema = @Schema()) }) })
 	
 	@GetMapping("/{id}")
 	public Books retrieveBook(@PathVariable int id) throws ResourceNotfoundException {

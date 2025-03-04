@@ -27,7 +27,7 @@ public class BooksService {
 	public Books getBookById(int id) throws ResourceNotfoundException {
 		Books b = repo.findByBookId(id);
 		
-		if(b.equals(null)) {
+		if(b == null) {
 			throw new ResourceNotfoundException("Book with id: " + id + " not found");
 		}
 		
