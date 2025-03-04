@@ -25,116 +25,121 @@ import com.tavant.spring.boot.SpringBootDemo.services.BooksService;
 
 import jakarta.validation.Valid;
 
-@Controller
-//@RestController
+//@Controller
+@RestController
 @RequestMapping("/books")
 public class BooksController {
 
 	@Autowired
 	private BooksService service;
 	
-	@GetMapping
-	public String listAllBooks(Model model) {
-		model.addAttribute("books", service.listAllBooks());
-		return "index";
-	}
-	
-	@GetMapping("show")
-	public String showForm(Model model) {
-		model.addAttribute("book", new Books());
-		return "add-book";
-	}
-	
-	@PostMapping("add")
-	public String addNewBook(@ModelAttribute Books book) {
-		try {
-			Books b = service.saveBookDetails(book);
-		} catch (ObjectMalformedException e) {
-			System.out.println(e.getMessage());
-		}
-		return "redirect:/books";
-	}
-
-	@GetMapping("edit/{id}")
-    public String showUpdateForm(@PathVariable int id, Model model) throws ResourceNotfoundException {
-        Books b = service.getBookById(id);
-        model.addAttribute("book", b);
-        return "update-book";
-    }
-	
-   @PostMapping("update/{id}")
-    public String updatePrice(@PathVariable int id, @Valid Books book, BindingResult result,
-        Model model) throws ObjectMalformedException {
-        if (result.hasErrors()) {
-            book.setBookId(id);
-            return "update-book";
-        }
-
-        service.updateBookPrice(id, book.getPrice());
-        model.addAttribute("books", service.listAllBooks());
-        return "index";
-    }
-	
-   @GetMapping("delete/{id}")
-   public String deleteBook(@PathVariable int id, Model model) {
-       try {
-			Books b = service.getBookById(id);
-			service.deleteBook(id);
-			 model.addAttribute("books", service.listAllBooks());
-		} catch (ResourceNotfoundException e) {
-			System.out.println(e.getMessage());
-		}
-       return "redirect:/books";
-   }
-   
-   
+	/*
+	 * Controller APIs for Thymeleaf
+	 */
 //	@GetMapping
-//	public ResponseEntity<List<Books>> listAllBooks() {
-//		List<Books> books = service.listAllBooks();
-//		
-//		if(books.isEmpty()) {
-//			return ResponseEntity.noContent().build();
+//	public String listAllBooks(Model model) {
+//		model.addAttribute("books", service.listAllBooks());
+//		return "index";
+//	}
+//	
+//	@GetMapping("show")
+//	public String showForm(Model model) {
+//		model.addAttribute("book", new Books());
+//		return "add-book";
+//	}
+//	
+//	@PostMapping("add")
+//	public String addNewBook(@ModelAttribute Books book) {
+//		try {
+//			Books b = service.saveBookDetails(book);
+//		} catch (ObjectMalformedException e) {
+//			System.out.println(e.getMessage());
 //		}
-//		
-//		return ResponseEntity.ok().body(books);
+//		return "redirect:/books";
 //	}
-	
-//	@GetMapping("/{id}")
-//	public Books retrieveBook(@PathVariable int id) {
-//		return service.getBookById(id);
-//	}
+//
+//	@GetMapping("edit/{id}")
+//    public String showUpdateForm(@PathVariable int id, Model model) throws ResourceNotfoundException {
+//        Books b = service.getBookById(id);
+//        model.addAttribute("book", b);
+//        return "update-book";
+//    }
 //	
-//	@GetMapping("/author/{author}")
-//	public List<Books> listAllBooksByAuthor(@PathVariable String author) {
-//		return service.listAllByAuthor(author);
-//	}
+//   @PostMapping("update/{id}")
+//    public String updatePrice(@PathVariable int id, @Valid Books book, BindingResult result,
+//        Model model) throws ObjectMalformedException {
+//        if (result.hasErrors()) {
+//            book.setBookId(id);
+//            return "update-book";
+//        }
+//
+//        service.updateBookPrice(id, book.getPrice());
+//        model.addAttribute("books", service.listAllBooks());
+//        return "index";
+//    }
 //	
-//	@GetMapping("/price/{start}/{end}")
-//	public List<Books> listAllBooksByPriceBetween(@PathVariable double start, @PathVariable double end) {
-//		return service.listAllByPriceBetween(start, end);
-//	}
-//	
-//	@PostMapping
-//	public ResponseEntity<Books> saveBookDetails(@RequestBody Books book) {
-//	//	return service.saveBookDetails(book);
-//		
-//		Books b = service.saveBookDetails(book);
-//		
-//		if(b.getBookId() == 0) {
-//			return ResponseEntity.internalServerError().build();
+//   @GetMapping("delete/{id}")
+//   public String deleteBook(@PathVariable int id, Model model) {
+//       try {
+//			Books b = service.getBookById(id);
+//			service.deleteBook(id);
+//			 model.addAttribute("books", service.listAllBooks());
+//		} catch (ResourceNotfoundException e) {
+//			System.out.println(e.getMessage());
 //		}
-//		
-//		return ResponseEntity.ok(b);
-//	}
+//       return "redirect:/books";
+//   }
+   
+   /*
+    * Rest API
+    */
+	@GetMapping
+	public ResponseEntity<List<Books>> listAllBooks() {
+		List<Books> books = service.listAllBooks();
+		
+		if(books.isEmpty()) {
+			return ResponseEntity.noContent().build();
+		}
+		
+		return ResponseEntity.ok().body(books);
+	}
 	
-//	@PatchMapping("/update/{id}/{price}")
-//	public String updatePrice(@PathVariable int id, @PathVariable double price) {
-//		return service.updateBookPrice(id, price);
-//	}
-//	
-//	@DeleteMapping("/delete/{id}")
-//	public String deleteBook(@PathVariable int id) {
-//		service.deleteBook(id);
-//		return "Book deleted";
-//	}
+	@GetMapping("/{id}")
+	public Books retrieveBook(@PathVariable int id) throws ResourceNotfoundException {
+		return service.getBookById(id);
+	}
+	
+	@GetMapping("/author/{author}")
+	public List<Books> listAllBooksByAuthor(@PathVariable String author) {
+		return service.listAllByAuthor(author);
+	}
+	
+	@GetMapping("/price/{start}/{end}")
+	public List<Books> listAllBooksByPriceBetween(@PathVariable double start, @PathVariable double end) {
+		return service.listAllByPriceBetween(start, end);
+	}
+	
+	@PostMapping
+	public ResponseEntity<Books> saveBookDetails(@RequestBody Books book) throws ObjectMalformedException {
+	//	return service.saveBookDetails(book);
+		
+		Books b = service.saveBookDetails(book);
+		
+		if(b.getBookId() == 0) {
+			return ResponseEntity.internalServerError().build();
+		}
+		
+		return ResponseEntity.ok(b);
+	}
+	
+	@PatchMapping("/update/{id}/{price}")
+	public String updatePrice(@PathVariable int id, @PathVariable double price) {
+		return service.updateBookPrice(id, price);
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public String deleteBook(@PathVariable int id) {
+		service.deleteBook(id);
+		return "Book deleted";
+	}
 }
