@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class MycomponentComponent {
   //componentName = 'mycomponent';
   name:string = "";
-  email: string = "pallavi@jjjs.c";
+  email: string = "";
 
   onSubmit() {
     console.log("Name: " + this.name + " Email: " + this.email);
