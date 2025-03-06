@@ -62,4 +62,21 @@ DataBinding : binding data with an element on the template
 3. attribute binding [value] = ""
 4. event binding (click)="method()"
 
+============================================================================
+Directives:
+modify the DOM structurally or behaviourly
+
+1. built - in
+	structural
+		ngFor, ngIf, ngSwitch
+	behavioural/ attribute 
+		ngStyle, ngClass
+2. custom
+
+
+
+
+
+
+
 
