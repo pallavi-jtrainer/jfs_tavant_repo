@@ -1,0 +1,31 @@
+<div class="container">
+  <div>
+    <!-- <button class="btn btn-primary" (click)="showAddPost()">Upload New Post</button> -->
+    <a class="btn btn-primary" routerLink="/posts/create">Upload New Post</a>
+  </div>
+  <div class="card">
+    <div class="card-header bg-dark text-white">
+      <h3>List Of Posts</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Post Id</th>
+            <th>Title</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of posts">
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>
+              <button class="btn btn-info">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
