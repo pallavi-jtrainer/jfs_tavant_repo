@@ -21,8 +21,11 @@
             class="form-control" [(ngModel)]="post.userId"/>
         </div>
         <div>
-          <button type="button" class="btn btn-success" style="margin-top: 2%;"
-          (click)="createPost()">Upload New Post</button>
+          <button type="button" class="btn btn-success"
+            style="margin-top: 2%; margin-right: 2%;"
+            (click)="createPost()">Upload New Post</button>
+          <button type="button" class="btn btn-outline-secondary" style="margin-top: 2%;"
+            (click)="navigateToHome()">Back</button>
         </div>
       </form>
     </div>

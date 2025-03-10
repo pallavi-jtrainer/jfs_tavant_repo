@@ -3,11 +3,16 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ViewpostsComponent } from '../components/posts/viewposts/viewposts.component';
 import { AddpostComponent } from '../components/posts/addpost/addpost.component';
+import { DetailsComponent } from '../components/posts/details/details.component';
+import { LoginComponent } from '../components/users/login/login.component';
 
 const routes: Routes = [
-  {path: 'posts/list', component: ViewpostsComponent},
-  {path: 'posts/create', component: AddpostComponent},
-  {path: '', redirectTo: 'posts/list', pathMatch: 'full'}
+  {path: 'posts/list/:id', component: ViewpostsComponent},
+  {path: 'posts/create/:id', component: AddpostComponent},
+  {path: 'posts/:id/:user', component: DetailsComponent},
+  {path: 'posts/title/:title/:user', component: DetailsComponent},
+  {path: 'login', component: LoginComponent},
+  {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
 @NgModule({

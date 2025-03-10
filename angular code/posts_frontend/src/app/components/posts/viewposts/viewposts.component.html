@@ -1,7 +1,9 @@
 <div class="container">
   <div>
     <!-- <button class="btn btn-primary" (click)="showAddPost()">Upload New Post</button> -->
-    <a class="btn btn-primary" routerLink="/posts/create">Upload New Post</a>
+    <a class="btn btn-primary" routerLink="/posts/create"
+      style="margin-top: 2%; margin-bottom: 2%;">Upload New Post</a>
+    <div></div>
   </div>
   <div class="card">
     <div class="card-header bg-dark text-white">
@@ -21,7 +23,7 @@
             <td>{{post.id}}</td>
             <td>{{post.title}}</td>
             <td>
-              <button class="btn btn-info">Details</button>
+              <button class="btn btn-info" (click)="navigateToDetailsPage(post.id)">Details</button>
             </td>
           </tr>
         </tbody>

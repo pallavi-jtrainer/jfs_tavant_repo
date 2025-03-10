@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Posts } from 'src/app/models/posts';
 import { PostsService } from 'src/app/services/postsservice.service';
 
@@ -15,7 +16,7 @@ export class AddpostComponent {
     userId: 0
   };
 
-  constructor(private postsService: PostsService){}
+  constructor(private postsService: PostsService, private router: Router){}
 
   createPost() {
     if(this.post.title == '' || this.post.body == '' || this.post.userId == 0) {
@@ -30,6 +31,7 @@ export class AddpostComponent {
         error: (e) => console.log(e)
       });
     }
+    this.router.navigate(['/posts/list']);
   }
 
   newPost(): void {
@@ -39,5 +41,9 @@ export class AddpostComponent {
       body: '',
       userId: 0
     }
+  }
+
+  navigateToHome() {
+    this.router.navigate(['/posts/list']);
   }
 }
