@@ -12,6 +12,8 @@ import { LoginComponent } from './components/users/login/login.component';
 import { RegisterComponent } from './components/users/register/register.component';
 import { ProfileComponent } from './components/users/profile/profile.component';
 import { DetailsComponent } from './components/posts/details/details.component';
+import { UsersService } from './services/users.service';
+import { MatchPasswordDirective } from './directives/match-password.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { DetailsComponent } from './components/posts/details/details.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    DetailsComponent
+    DetailsComponent,
+    MatchPasswordDirective
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import { DetailsComponent } from './components/posts/details/details.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [PostsService],
+  providers: [PostsService, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

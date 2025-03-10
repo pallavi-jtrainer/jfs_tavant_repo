@@ -4,7 +4,9 @@
       <h3>Registration Form</h3>
     </div>
     <div class="card-body">
-      <form clas="form-horizontal" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <form clas="form-horizontal" [formGroup]="registerForm"
+        (ngSubmit)="onSubmit()">
+        <!-- [appMatchPassword] = "['password', 'confirmPassword']"> -->
         <div class="form-group">
           <label for="firstName">First Name:</label>
           <input type="text" id="firstName" name="firstName"
