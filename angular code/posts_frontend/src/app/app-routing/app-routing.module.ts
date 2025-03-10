@@ -5,6 +5,7 @@ import { ViewpostsComponent } from '../components/posts/viewposts/viewposts.comp
 import { AddpostComponent } from '../components/posts/addpost/addpost.component';
 import { DetailsComponent } from '../components/posts/details/details.component';
 import { LoginComponent } from '../components/users/login/login.component';
+import { RegisterComponent } from '../components/users/register/register.component';
 
 const routes: Routes = [
   {path: 'posts/list/:id', component: ViewpostsComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'posts/:id/:user', component: DetailsComponent},
   {path: 'posts/title/:title/:user', component: DetailsComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent},
   {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 

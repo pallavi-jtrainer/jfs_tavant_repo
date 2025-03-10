@@ -10,9 +10,6 @@
           <input type="text" id="username" required
           [(ngModel)]="form.username" name="username"
           class="form-control" #username="ngModel">
-          <!-- <div>
-            <span *ngIf="username.errors['required']" class="text-danger">Username/Email required!!</span>
-          </div> -->
         </div>
         <div>
           <label for="password">Password:</label>
@@ -23,7 +20,9 @@
         <button type="submit" class="btn btn-primary"
         [disabled]="!loginForm.form.valid">Login</button>
         <div>
-          <span>Not a Member? Please <a href="#" class="link-success">Register/Sign Up</a></span>
+          <span>Not a Member? Please
+            <a href="#" class="link-success" routerLink="/register">Register/Sign Up</a>
+          </span>
         </div>
       </form>
     </div>
