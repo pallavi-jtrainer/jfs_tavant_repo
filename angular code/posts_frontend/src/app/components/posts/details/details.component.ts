@@ -12,6 +12,8 @@ export class DetailsComponent {
 
   id: number = 0;
   title: string = '';
+  userId:number = 0;
+
   post:Posts = {
     id: 0,
     title: '',
@@ -27,6 +29,7 @@ export class DetailsComponent {
     private postService: PostsService) { }
 
   ngOnInit() {
+    this.userId = this.route.snapshot.params['user'];
     this.loadPage();
   }
 
@@ -98,10 +101,10 @@ export class DetailsComponent {
         });
     }
 
-    this.router.navigate(['/posts/list']);
+    this.router.navigate(['/posts/list', this.userId]);
   }
 
   navigateToHome() {
-    this.router.navigate(['/posts/list']);
+    this.router.navigate(['/posts/list', this.userId]);
   }
 }

@@ -1,13 +1,16 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, Observable, Subject, throwError } from 'rxjs';
 import { Posts } from '../models/posts';
+import { LoggingService } from './logging.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostsService {
   private baseUrl = "http://localhost:9001/api";
+  logService: LoggingService = inject(LoggingService);
+  errorObject = new Subject<HttpErrorResponse>();
 
   constructor(private http: HttpClient) { }
 
@@ -21,9 +24,18 @@ export class PostsService {
     .pipe(catchError(this.errorHandler));
   }
 
-  createPost(post: Posts): Observable<any> {
+  // createPost(post: Posts): Observable<any> {
+  //   return this.http.post<any>(`${this.baseUrl}/posts`, post)
+  //   .pipe(catchError(this.errorHandler));
+  // }
+
+  createPost(post: Posts) {
     return this.http.post<any>(`${this.baseUrl}/posts`, post)
-    .pipe(catchError(this.errorHandler));
+    .pipe(catchError((err) => {
+      const errObject = {statusCode: err.statusCode, errorMessage: err.message, errorDate: new Date()};
+      this.logService.logError(errObject);
+      return throwError(() => errObject);
+    })).subscribe(err => {this.errorObject.next(err);})
   }
 
   getPostDetailsByTitle(title: string): Observable<Posts>{

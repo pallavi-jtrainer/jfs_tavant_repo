@@ -12,6 +12,7 @@ export class ViewpostsComponent {
 
   posts: Posts[] = [];
   id: number = 0;
+  searchTerm: string = '';
 
   constructor(private postsService: PostsService,
     private router: Router, private route: ActivatedRoute
@@ -57,4 +58,11 @@ export class ViewpostsComponent {
   navigateToDetailsPage(postId: number) {
     this.router.navigate(['/posts', postId, this.id]);
   }
+
+  showDetails() {
+    this.router.navigate(['/posts/title', this.searchTerm, this.id]);
+  }
+  // navigateToNewPostPage() {
+  //   this.router.navigate(['/posts/create/', this.id]);
+  // }
 }

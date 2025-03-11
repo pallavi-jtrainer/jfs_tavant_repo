@@ -5,7 +5,7 @@
     </div>
     <div class="card-body">
       <form clas="form-horizontal" [formGroup]="registerForm"
-        (ngSubmit)="onSubmit()">
+        (ngSubmit)="onSubmit()" autocomplete="off">
         <!-- [appMatchPassword] = "['password', 'confirmPassword']"> -->
         <div class="form-group">
           <label for="firstName">First Name:</label>

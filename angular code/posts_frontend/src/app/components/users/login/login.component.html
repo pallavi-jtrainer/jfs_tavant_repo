@@ -6,7 +6,7 @@
     <div class="card-body">
       <form (ngSubmit)="loginForm.form.valid && onSubmit()" #loginForm="ngForm">
         <div>
-          <label for="email">Username / Email:</label>
+          <label for="username">Username / Email:</label>
           <input type="text" id="username" required
           [(ngModel)]="form.username" name="username"
           class="form-control" #username="ngModel">

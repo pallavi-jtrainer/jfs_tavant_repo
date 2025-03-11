@@ -38,10 +38,10 @@ export class RegisterComponent {
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
-      firstName:['', Validators.required,
-        Validators.minLength(3), Validators.maxLength(25)],
-      lastName:['', Validators.required,
-        Validators.minLength(3), Validators.maxLength(25)],
+      firstName:['', [Validators.required,
+        Validators.minLength(3), Validators.maxLength(25)]],
+      lastName:['', [Validators.required,
+        Validators.minLength(3), Validators.maxLength(25)]],
       email: ['', [Validators.required, Validators.email]],
       username: ['', [Validators.required, Validators.minLength(6)]],
       password:['',
