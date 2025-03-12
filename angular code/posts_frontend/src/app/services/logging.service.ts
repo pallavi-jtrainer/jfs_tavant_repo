@@ -14,7 +14,7 @@ export class LoggingService {
   }
 
   fetchError() {
-    return this.http.get('/api/errorlogs')
+    return this.http.get('https://angularhttpclient-f1d30-default-rtdb.firebaseio.com/log.json')
     .subscribe({
       next: (data) => {
         console.log(data);

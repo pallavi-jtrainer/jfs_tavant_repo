@@ -16,6 +16,7 @@ import { UsersService } from './services/users.service';
 import { MatchPasswordDirective } from './directives/match-password.directive';
 import { AuthInterceptorService } from './services/auth-interceptor.service';
 import { LoggingInterceptorService } from './services/logging-interceptor.service';
+import { ViewusersComponent } from './components/users/viewusers/viewusers.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { LoggingInterceptorService } from './services/logging-interceptor.servic
     RegisterComponent,
     ProfileComponent,
     DetailsComponent,
-    MatchPasswordDirective
+    MatchPasswordDirective,
+    ViewusersComponent
   ],
   imports: [
     BrowserModule,
