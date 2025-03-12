@@ -1,0 +1,22 @@
+validations for template driven forms x
+reactive forms x
+pipes
+HTTP Interceptors
+child routes
+parent child communication and vice versa
+angular authentication - route guards
+material ui
+===========================================================
+Pipes:
+help transform the data on the template
+
+1. Pure Pipes:
+	expect an input
+2. Impure Pipes
+
+Directives:
+@Input
+@Output
+
+==========================================================
+HTTP Interceptors

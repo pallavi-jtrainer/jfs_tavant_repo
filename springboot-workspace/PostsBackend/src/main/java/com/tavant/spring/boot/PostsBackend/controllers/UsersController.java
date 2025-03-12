@@ -1,9 +1,11 @@
 package com.tavant.spring.boot.PostsBackend.controllers;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,10 +19,16 @@ import com.tavant.spring.boot.PostsBackend.services.UsersService;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin("http://localhost:4200")
 public class UsersController {
 
 	@Autowired
 	private UsersService service;
+	
+	@GetMapping("/users")
+	public ResponseEntity<List<Users>> listAllUsers() {
+		return ResponseEntity.ok(service.getAllUsers());
+	}
 	
 	@GetMapping("/user/{id}")
 	public ResponseEntity<Optional<Users>> getUserDetailsById(@PathVariable long id) {

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import com.tavant.spring.boot.PostsBackend.services.PostsService;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin("http://localhost:4200")
 public class PostsController {
 
 	@Autowired
@@ -28,7 +30,7 @@ public class PostsController {
 	}
 	
 	@GetMapping("/posts/user/{id}")
-	public ResponseEntity<List<Posts>> getAllPostForUser(@PathVariable long id) {
+	public ResponseEntity<List<Posts>> getAllPostsForUser(@PathVariable long id) {
 		return ResponseEntity.ok(service.getAllPostsByUser(id));
 	}
 	

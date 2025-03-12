@@ -1,5 +1,6 @@
 package com.tavant.spring.boot.PostsBackend.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,10 @@ public class UsersService {
 
 	@Autowired
 	private UsersRepository repo;
+	
+	public List<Users> getAllUsers() {
+		return repo.findAll();
+	}
 	
 	public Optional<Users> getUserById(long id) {
 		return repo.findByUserId(id);
