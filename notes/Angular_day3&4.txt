@@ -1,8 +1,8 @@
 validations for template driven forms x
 reactive forms x
-pipes
-HTTP Interceptors
-child routes
+pipes x
+HTTP Interceptors x
+child routes x
 parent child communication and vice versa
 angular authentication - route guards
 material ui
@@ -20,3 +20,13 @@ Directives:
 
 ==========================================================
 HTTP Interceptors
+
+Route Guards:
+6 types:
+1. CanActivate
+2. CanDeactivate
+3. Resolve
+4. CanLoad
+5. CanActivateChild
+6. CanMatch
+

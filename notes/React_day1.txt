@@ -1,0 +1,38 @@
+React JS
+- open source javascript library
+- used to make SPA
+- developed by Facebook
+- uses Virtual DOM
+- jsx -> javascript xml / javascript extended
+- component based
+	-> functional
+		stateless components
+	-> class
+		stateful components
+		render()
+- tools to create react applications
+	- create-react-app (CRA)
+	- next.js
+	- vite
+
+- props
+	stands for properties
+	immutable
+
+- React component Life cycle
+	Mounting Phase
+	1. constructor
+	2. render
+	3. componentWillMount
+	4. componentDidMount
+
+	Update Phase
+	1. shouldComponentUpdate 
+	2. componentDidUpdate
+
+	Unmounting Phase
+	1. componentDidUnmount
+
+
+	
+
