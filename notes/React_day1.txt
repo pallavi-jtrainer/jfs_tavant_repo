@@ -33,6 +33,20 @@ React JS
 	Unmounting Phase
 	1. componentDidUnmount
 
+- React State
+	used to contain data or info about the component
 
+	is an in-built object of class Components
+	maintained using setState
+
+        is not available by default in functional components
+	the useState hook is used to maintain state in functional componenets
+
+- React Forms
+	Controlled Forms
+		- stores each input value in a React state
+		- sets the values to re-render
+	Uncontrolled Forms
+	
 	
 
