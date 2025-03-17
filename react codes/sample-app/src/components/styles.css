@@ -1,0 +1,29 @@
+.container {
+    width: 350px;
+    height: 100px;
+    background-color: aquamarine;
+    transition: all 0.5s ease;
+    color: black;
+}
+.container.animated {
+    /* transform: scale(1.2); */
+    background-color: crimson;
+    color:antiquewhite;
+}
+
+.container.cartwheel {
+    width: 300px;
+    height: 100px;
+    background-color: #4CAF50;
+    animation: cartwheel 2s infinite linear;
+    transform-origin: center;
+}
+
+@keyframes cartwheel {
+    0% {
+        transform: translateX(50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(100%) rotate(360deg);
+    }
+}

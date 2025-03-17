@@ -2,19 +2,32 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import TodoService from "../services/TodoService";
+import { useFetch } from "../helpers/useFetch";
+import { useLocalStorage } from "../helpers/useLocalStorage";
 
-export default function TodoList() {
+export default function TodoList(props) {
     const navigate = useNavigate();
     let [todos, setTodos] = useState([]);
+    const url = 'https://jsonplaceholder.typicode.com/todos';
+
+    let username = props.username;
+    let password = "pallavi123";
 
     //useEffect is used only with data retrieval
-    useEffect(
-        () => {
-            getTodos();
-        }, []
-    );
+    // useEffect(
+    //     () => {
+    //         getTodos();
+    //     }, []
+    // );
+
+    const [curTodos] = useFetch(url);
+    // setTodos(curTodos);
+
+    useLocalStorage(username, password);
 
     const getTodos = () => {
+        // let curTodos = useFetch(url);
+
         TodoService.getTodos().then((data) => {
             setTodos(data);
         })
@@ -76,7 +89,7 @@ export default function TodoList() {
                             </tr>
                         </thead>
                         <tbody>
-                            {todos.map((todo) => {
+                            {curTodos.map((todo) => {
                                 return(
                                     <tr key={todo.id}>
                                         <td>{todo.id}</td>

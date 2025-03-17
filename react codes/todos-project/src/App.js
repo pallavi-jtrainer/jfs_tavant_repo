@@ -24,7 +24,7 @@ function App() {
           </nav>
 
           <Routes>
-            <Route path="/list" element={<TodoList/>}/>
+            <Route path="/list" element={<TodoList username="pallavi"/>}/>
             <Route path="/add" element={<AddTodo/>}/>
             <Route path="/details/:id" element={<TodoDetails/>}/>
           </Routes>
