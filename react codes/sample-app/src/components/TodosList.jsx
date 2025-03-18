@@ -70,7 +70,7 @@ export const TodosList = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {todos.slice(page * rowsPerPage, page *rowsPerPage + rowsPerPage).map((todo) => (
+                        {todos.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((todo) => (
                             <StyledTableRow key={todo.id}>
                                 <StyledTableCell component="th" scope="row">
                                         {todo.id}

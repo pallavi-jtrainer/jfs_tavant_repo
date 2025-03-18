@@ -1,9 +1,22 @@
 import '../../styles/Login.css';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { Container, Row, Col, Form, Button} from "react-bootstrap";
+//import { AdminDashboard } from './AdminDashboard';
+import { useNavigate } from 'react-router';
 
 export default function Login() {
     const [validated, setValidated] = useState(false);
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    // useCallback(() => {
+    //     if (username === 'admin@gmail.com' && password === 'password') {
+    //         navigate('/admin');
+    //     } else {
+    //         navigate('/user');
+    //     }
+    // },[username, navigate, password]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -12,7 +25,13 @@ export default function Login() {
             event.stopPropagation();
         }
 
+        if (username === 'admin@gmail.com' && password === 'password') {
+            navigate('/admin');
+        } else {
+            navigate('/user');
+        }
         setValidated(true);
+
     }
 
     return (
@@ -26,6 +45,8 @@ export default function Login() {
                             <Form.Control
                                 type="email"
                                 placeholder="Enter email or username"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
                             />
                             <Form.Control.Feedback type="invalid">
                                 Please enter Username or Email.
@@ -37,6 +58,8 @@ export default function Login() {
                             <Form.Control
                                 type="password"
                                 placeholder="Password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
                             <Form.Control.Feedback type="invalid">
                                 Please enter a valid password.
