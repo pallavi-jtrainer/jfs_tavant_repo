@@ -19,4 +19,5 @@ Material UI
 - to install
 	npm install @mui/material @emotion/react @emotion/styled
 - has a lot of free templates to create a variety of pages
-- 
+- in angular
+	npm i @angular/material
