@@ -1,0 +1,37 @@
+<div class="container">
+  <div style="display: ruby-text;">
+    <!-- <button class="btn btn-primary" (click)="showAddPost()">Upload New Post</button> -->
+    <a class="btn btn-primary" (click)="showAddPost()"
+      style="margin-top: 2%; margin-bottom: 2%;">Upload New Post</a>
+      <form class="d-flex" style="margin-top: 2%; margin-left: 60%;">
+        <input class="form-control me-2" type="search" placeholder="Enter Post Title" style="margin-top: 2%;"
+        [(ngModel)]="searchTerm">
+        <button class="btn btn-outline-success" type="button" (click)="showDetails()" style="margin-top: 2%;">Search</button>
+      </form>
+  </div>
+  <div class="card">
+    <div class="card-header bg-dark text-white">
+      <h3>List Of Posts</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Post Id</th>
+            <th>Title</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let post of posts">
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>
+              <button class="btn btn-info" (click)="navigateToDetailsPage(post.id)">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

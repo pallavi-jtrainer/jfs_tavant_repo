@@ -1,0 +1,34 @@
+Develop an Employee Management System using JDBC to interact with a database and custom exceptions to handle specific error scenarios.
+
+Requirements:
+
+Database Setup:
+
+Create a database named CompanyDB.
+Create a table named Employees with the following columns:
+employee_id (INT, Primary Key, Auto Increment)
+first_name (VARCHAR(50))
+last_name (VARCHAR(50))
+age (INT)
+department (VARCHAR(50))
+salary (DECIMAL)
+
+Java Application:
+
+Implement an Employee class with properties: employeeId, firstName, lastName, age, department, and salary.
+
+Implement an EmployeeDAO (Data Access Object) class to handle database operations using JDBC. The class should include the following methods:
+
+addEmployee(Employee employee): Adds a new employee to the database.
+
+getEmployeeById(int employeeId): Retrieves an employee by their ID.
+
+updateEmployee(Employee employee): Updates an existing employee's details.
+
+deleteEmployee(int employeeId): Deletes an employee by their ID.
+
+Custom Exceptions:
+
+Create a custom exception class named EmployeeNotFoundException to handle cases where an employee is not found in the database.
+
+Create another custom exception class named DatabaseConnectionException to handle database connection errors.

@@ -1,0 +1,168 @@
+Java:
+ -> high level programming language
+ -> object - oriented language
+ -> compiled and interpreted
+ -> James Gosling, Patrick Naughton, Mike Sheridan
+ -> C syntax
+ -> simple
+ -> easy to learn
+ -> portable
+ -> platform independent
+ -> secure
+	All java programs are executed inside the JVM -> Java Virtual Machine
+	no explicit pointers
+	bytecode (compiled code) -> intermediate code (.class files)
+ 	Classloader
+ -> robust
+	memory management
+        exception handling
+ -> multithreaded
+
+
+JVM -> Java Virtual Machine
+   -> provides a sandbox for executing java code
+   -> memory management
+   -> code management
+   -> exception handling
+-------------------------------------------------------------
+Object - Oriented Programming
+
+1. Object -> instance of a class (attributes + behaviour)
+2. Class -> blueprint of an object
+         -> a single unit with properties and related actions
+
+class Student {
+  age
+  name
+  rollno
+  standard
+  subject
+  email
+  phone
+  gender
+  dob
+  address
+  marks
+  registration_no
+
+  study()
+  takeExam()
+  attendClass()
+  
+}
+
+3. 4 Pillars
+  -> inheritance
+  -> abstraction -> hiding irrelevant data from the object
+  -> encapsulation -> putting everything associated with a class in a single location
+  -> polymorphism
+
+Variables: -> named locations in memory
+ -> class variables 
+ -> local variables
+ -> static variables
+
+data types:
+1. primitive data types
+   int, float, double, char, byte, long, short, boolean
+  
+   datatype variableName [= value];
+
+2. non - primitive data types
+   class, enum, String, array
+
+
+Methods: actions performed
+  return_type methodName(parameter list) {}
+
+
+Access specifiers:-> specify the level of access to a variable/method/class
+1. public
+2. private
+3. protected
+4. default
+
+Operators:
+1. based on operands
+	unary ++, --, NOT
+     	binary +, -, /, *, %, AND, OR, >, <, >=, <=, !=, ==, = 
+	ternary ?:
+2. based on functionality
+	arithmetic =, -, *, /, %, ++, --
+	comparison >, <, >=, <=, ==, !=
+	assignment =
+	bitwise >>, <<, |, ^, & 
+	logical &&, ||, !
+
+incrementation:
+int a = 1;
+a = a + 1;
+
+++a => 2;
+a++ => 2;
+a => 3
+
+decrementation
+int a = 10;
+a = a - 1;
+s
+--a => 9
+a-- => 9
+a => 8
+
+Flow Control Statements:
+1. Conditional Statements
+2. Branching statements
+3. iterative statements
+4. jump statements
+
+1. If -> returns a boolean values
+      -> checks if a condition is true or false
+   if (condition) {}
+   else {}
+ Nested if
+   if inside an if
+    if () {
+      if () {
+         if () {}
+      }
+   }
+
+ if else if -> every else has an if inside
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

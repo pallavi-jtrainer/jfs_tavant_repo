@@ -1,0 +1,15 @@
+multilingual support
+https://medium.com/ibisdev/how-to-create-an-api-in-spring-with-support-for-multiple-languages-34dee2a71e84
+https://www.momentslog.com/development/web-backend/building-multilingual-applications-with-spring-boot
+https://medium.com/@AlexanderObregon/how-to-implement-internationalization-i18n-in-spring-boot-aea2c62c1bfa
+
+
+redis caching in springboot
+https://www.geeksforgeeks.org/spring-boot-caching-with-redis/
+https://javatechonline.com/how-to-implement-redis-cache-in-spring-boot-application/
+https://www.codingshuttle.com/spring-boot-hand-book/redis-cache-in-spring-boot/
+https://fullstack-coder.com/caching-spring-boot-redis/
+
+
+Sample API contract
+https://medium.com/@harutyunabgaryann/the-api-contract-bridging-the-gap-between-backend-and-frontend-development-3074effc642b

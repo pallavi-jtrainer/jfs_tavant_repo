@@ -1,0 +1,40 @@
+Develop a Library Management System using JDBC to interact with a database and implement custom exceptions to handle specific error scenarios.
+
+Requirements:
+
+Database Setup:
+
+Create a database named LibraryDB.
+
+Create a table named Books with the following columns:
+book_id (INT, Primary Key, Auto Increment)
+title (VARCHAR(100))
+author (VARCHAR(50))
+published_year (INT)
+available_copies (INT)
+
+Java Application:
+
+Implement a Book class with properties: bookId, title, author, publishedYear, and availableCopies.
+
+Implement a BookDAO (Data Access Object) class to handle database operations using JDBC. The class should include the following methods:
+
+addBook(Book book): Adds a new book to the database.
+
+getBookById(int bookId): Retrieves a book by its ID.
+
+updateBook(Book book): Updates an existing book's details.
+
+deleteBook(int bookId): Deletes a book by its ID.
+
+borrowBook(int bookId): Decrements the available copies of a book by 1.
+
+returnBook(int bookId): Increments the available copies of a book by 1.
+
+Custom Exceptions:
+
+Create a custom exception class named BookNotFoundException to handle cases where a book is not found in the database.
+
+Create another custom exception class named DatabaseConnectionException to handle database connection errors.
+
+Create a custom exception class named InsufficientCopiesException to handle cases where a book cannot be borrowed due to lack of available copies.

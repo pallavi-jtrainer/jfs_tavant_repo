@@ -1,0 +1,23 @@
+Custom Hooks
+- function starting with use
+- can call other hooks
+- reuses stateful logic
+
+Animations
+1. react-spring
+2. lottie
+3. framer motion
+4. react transition group
+	- Transition
+	- CSSTransition
+	-Transition Group
+
+Conditional Rendering
+- rendering a component based on a condition
+
+Material UI
+- to install
+	npm install @mui/material @emotion/react @emotion/styled
+- has a lot of free templates to create a variety of pages
+- in angular
+	npm i @angular/material

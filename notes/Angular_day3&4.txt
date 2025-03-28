@@ -1,0 +1,32 @@
+validations for template driven forms x
+reactive forms x
+pipes x
+HTTP Interceptors x
+child routes x
+parent child communication and vice versa
+angular authentication - route guards
+material ui
+===========================================================
+Pipes:
+help transform the data on the template
+
+1. Pure Pipes:
+	expect an input
+2. Impure Pipes
+
+Directives:
+@Input
+@Output
+
+==========================================================
+HTTP Interceptors
+
+Route Guards:
+6 types:
+1. CanActivate
+2. CanDeactivate
+3. Resolve
+4. CanLoad
+5. CanActivateChild
+6. CanMatch
+

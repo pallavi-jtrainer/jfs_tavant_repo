@@ -1,0 +1,13 @@
+Cloud Fundamentals:
+	a set of cloud computing services
+	3 types of clouds
+		public, private, hybrid
+	3 types of Models
+		PaaS => Platform as a Service
+		IaaS => Infrastructure as a Service
+		SaaS => Software as a Service
+
+AWS => Amazon Web Services
+
+IAM -> Identity & Access Management
+	

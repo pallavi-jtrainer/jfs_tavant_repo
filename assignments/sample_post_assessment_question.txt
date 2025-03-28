@@ -1,0 +1,38 @@
+Ticket Booking System
+Objective: Develop a Ticket Booking System that manages events, customers, and bookings using JDBC for database interactions and custom exceptions to handle specific error scenarios.
+
+Requirements:
+
+Database Setup:
+
+Create a database named TicketBookingDB.
+
+Create tables Events, Customers, and Bookings with appropriate columns.
+
+Java Application:
+
+Implement an abstract class User with properties like userId, name, email, and abstract methods like getDetails().
+
+Create subclasses Customer and Admin extending User with specific attributes.
+
+Implement an interface BookingManagement with methods like bookTicket(), cancelBooking(), and checkAvailability().
+
+Implement a EventDAO class for database operations using JDBC, including methods like addEvent(), getEventById(), and updateEvent().
+
+Implement a CustomerDAO class for database operations using JDBC, including methods like addCustomer(), getCustomerById(), and updateCustomer().
+
+Implement custom exceptions EventNotFoundException, CustomerNotFoundException, and DatabaseConnectionException.
+
+Scenarios:
+
+Adding a new event or customer.
+
+Retrieving an event or customer by ID.
+
+Updating event or customer details.
+
+Booking a ticket for an event.
+
+Cancelling a booking.
+
+Handling exceptions for event not found, customer not found, and database connection errors.

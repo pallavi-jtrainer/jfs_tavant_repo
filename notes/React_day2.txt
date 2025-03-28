@@ -1,0 +1,17 @@
+React Routers:
+-routing library
+- navigations
+
+Core components:
+1. BrowserRouter
+2. HashRouter
+3. MemoryRouter
+4. Route
+5. Routes
+6. Link
+7. useNavigate
+8. useParams
+9. useLocation
+
+Fetch API
+

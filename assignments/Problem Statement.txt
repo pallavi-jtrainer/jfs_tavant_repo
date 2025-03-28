@@ -1,0 +1,43 @@
+Problem Statement:
+
+You are tasked with building a basic application for managing a library. The application should be able to store and retrieve book details such as title, author, and ISBN. You should implement this functionality using Spring Core and demonstrate the use of dependency injection to manage the application's components.
+
+Requirements:
+
+Book Class:
+
+Create a Book class with fields for title, author, and ISBN.
+
+Provide getter and setter methods for these fields.
+
+BookRepository Interface:
+
+Define a BookRepository interface with methods for adding and retrieving books:
+
+public interface BookRepository {
+    void addBook(Book book);
+    Book getBook(String isbn);
+}
+InMemoryBookRepository Class:
+
+Implement the BookRepository interface in a class called InMemoryBookRepository.
+
+Use a Map<String, Book> to store books, where the key is the ISBN and the value is the Book object.
+
+LibraryService Class:
+
+Create a LibraryService class that uses the BookRepository to add and retrieve books.
+
+Use constructor-based dependency injection to inject the BookRepository into the LibraryService.
+
+Spring Configuration:
+
+Create a Spring configuration file (XML or Java-based) to define the beans for InMemoryBookRepository and LibraryService.
+
+Ensure that LibraryService is injected with an instance of InMemoryBookRepository.
+
+Main Class:
+
+Create a Main class to load the Spring context and demonstrate adding and retrieving books.
+
+By following this problem statement, you will get hands-on experience with Spring Core and dependency injection, while implementing a simple library management application.

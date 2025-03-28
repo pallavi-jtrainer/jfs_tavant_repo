@@ -1,0 +1,8 @@
+.redtext {
+    color: red;
+}
+
+.navStyle {
+    display: flex;
+    justify-content: flex-start;
+}

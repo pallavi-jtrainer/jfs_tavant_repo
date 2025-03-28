@@ -1,0 +1,14 @@
+Social Media Platform
+Entities: User, Post, Comment
+
+Description: Develop a social media platform where each user can create posts, and each post can have multiple comments. Implement CRUD operations to manage users, posts, and comments.
+
+Requirements:
+
+Create: Register a new user, create a new post, and add comments to a post.
+
+Read: Retrieve user profiles, posts by a user, and comments on a post.
+
+Update: Update user profiles, edit posts, and modify comments.
+
+Delete: Delete users, posts, or comments.

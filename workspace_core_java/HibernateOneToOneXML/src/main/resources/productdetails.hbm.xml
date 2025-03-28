@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>
+	<class name="com.tavant.hibernate.HibernateOneToOneXML.entity.ProductDetail" table="PRODUCTDETAILS">
+        <id name="id" type="int">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+        <property name="productId" column="PRODUCT_ID" unique="true">
+            <generator class="foreign">
+                <param name="property">product</param>
+            </generator>
+        </property>
+        <property name="category" column="category" />
+        <property name="brand" column="brand" />
+            
+        <one-to-one name="product" constrained="true" class="com.tavant.hibernate.HibernateOneToOneXML.entity.Product" />
+    </class> 
+</hibernate-mapping>

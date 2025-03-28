@@ -1,0 +1,13 @@
+Create a Spring Boot application with REST APIs and exceptions.
+
+Create a Task Management System where users can login and create, update, delete and retrieve tasks. They can also track the progress of a task. A user has to login and then access the task page. If a user does not exist, he should register. Appropriate validations have to be implemented.
+
+Fields in
+Users:
+id, firstName, lastName, email, username, password (encrypted)
+
+Tasks:
+id, taskName, status, start date, due date, userid
+
+Status(Enum)
+pending, in progress, completed

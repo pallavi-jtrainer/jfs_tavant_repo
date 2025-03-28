@@ -1,0 +1,6 @@
+springboot controller urls
+http://localhost:9001/books => POST and GET
+http://localhost:9001/books/1 => GET one book
+http://localhost:9001/books/author/Unknown => GET books with a particular author
+http://localhost:9001/books/update/2/300 => PATCH books with new price for a particular id
+http://localhost:9001/books/delete/2 => DELETE book with a particular id

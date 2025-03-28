@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>
+	<class name="com.tavant.hibernate.HibernateOneToOneXML.entity.Product" table="PRODUCT" >
+		<id name="id" type="int">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+		<property name="productId" type="int">
+			<column name="product_id" unique="true" nullable="false"/>
+		</property>
+		<property name="productName" type="string">
+			<column name="product_name" />
+		</property>
+		<property name="price" type="double">
+			<column name="price" />
+		</property>
+		<one-to-one name="productdetails" 
+			class="com.tavant.hibernate.HibernateOneToOneXML.entity.ProductDetails"
+			cascade="save-update" />
+	</class>
+</hibernate-mapping>

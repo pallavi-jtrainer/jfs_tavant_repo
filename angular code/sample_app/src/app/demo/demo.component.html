@@ -1,0 +1,87 @@
+<div class="container">
+  <div>
+    <h2 style="text-align: center;">List of Fruits</h2>
+  </div>
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fruit of fruits" [ngSwitch]="fruit.price">
+          <td>
+            <span *ngSwitchCase="50" [ngClass]="{'red': showColor}">
+              {{fruit.id}}
+            </span>
+            <!-- <span *ngSwitchCase="50" [ngClass]="{'red': true}">
+              {{fruit.id}}
+            </span> -->
+            <!-- <span *ngSwitchCase="100" [ngStyle]="{'color': 'blue'}">
+              {{fruit.id}}
+            </span> -->
+            <span *ngSwitchCase="100" [ngClass]="{'blue': showColor}">
+              {{fruit.id}}
+            </span>
+            <!-- <span *ngSwitchCase="100" [class.blue]="true">
+              {{fruit.id}}
+            </span> -->
+            <!-- <span *ngSwitchCase="150" [ngStyle]="{'color': 'orange'}">
+              {{fruit.id}}
+            </span> -->
+            <span *ngSwitchCase="150" class="orange">
+              {{fruit.id}}
+            </span>
+            <span  *ngSwitchCase="200" [ngStyle]="{'color':'green'}">
+              {{fruit.id}}
+            </span>
+            <span *ngSwitchDefault>
+              {{fruit.id}}
+            </span>
+          </td>
+          <td><span *ngSwitchCase="50" [ngStyle]="{'color': 'red'}">
+            {{fruit.name}}
+          </span>
+          <span *ngSwitchCase="100" [ngStyle]="{'color': 'blue'}">
+            {{fruit.name}}
+          </span>
+          <span *ngSwitchCase="150" [ngStyle]="{'color': 'orange'}">
+            {{fruit.name}}
+          </span>
+          <span  *ngSwitchCase="200" [ngStyle]="{'color':'green'}">
+            {{fruit.name}}
+          </span>
+          <span *ngSwitchDefault>
+            {{fruit.name}}
+          </span></td>
+          <td><span *ngSwitchCase="50" [ngStyle]="{'color': 'red'}">
+            {{fruit.price}}
+          </span>
+          <span *ngSwitchCase="100" [ngStyle]="{'color': 'blue'}">
+            {{fruit.price}}
+          </span>
+          <span *ngSwitchCase="150" [ngStyle]="{'color': 'orange'}">
+            {{fruit.price}}
+          </span>
+          <span  *ngSwitchCase="200" [ngStyle]="{'color':'green'}">
+            {{fruit.price}}
+          </span>
+          <span *ngSwitchDefault>
+            {{fruit.price}}
+          </span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <button class="btn btn-info" (click)="showData()">{{btnText}}</button>
+    <br>
+    <h4 *ngIf="showInfo">This is to demonstrate ngIf directive</h4>
+
+    <br>
+    <button class="btn btn-success" (click)="changeColor()">Change Color</button>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+com\tavant\spring\mvc\SpringMvcDemo\config\AppConfig.class
+com\tavant\spring\mvc\SpringMvcDemo\App.class
+com\tavant\spring\mvc\SpringMvcDemo\controller\FacultyController.class
+com\tavant\spring\mvc\SpringMvcDemo\config\WebConfig.class
+com\tavant\spring\mvc\SpringMvcDemo\entity\Faculty.class
+com\tavant\spring\mvc\SpringMvcDemo\dao\FacultyDao.class
+com\tavant\spring\mvc\SpringMvcDemo\service\FacultyService.class
+com\tavant\spring\mvc\SpringMvcDemo\dao\FacultyDaoImpl.class
+com\tavant\spring\mvc\SpringMvcDemo\config\AppInitializer.class

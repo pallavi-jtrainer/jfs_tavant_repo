@@ -1,0 +1,67 @@
+Collections
+Exception Handling
+Multithreading
+-----------------------------------
+Wrapper Class
+
+Collections Framework -> java.util;
+
+List:
+ArrayList
+LinkedList
+Vector
+Stack
+
+Queue
+deque(I)
+BlockingQueue(I)
+BlockingDeque(I)
+
+PriorityQ(c)
+ArrayDeque
+
+Set:
+HashSet
+TreeSet
+LinkedHahSet
+EnumSet
+
+Map: key - value pair
+HashMap
+TreeMap
+
+------------------------------------------------
+Exceptions:
+Errors
+Exceptions
+	- Checked Exception
+	- Unchecked Exception
+
+try
+catch
+finally
+throw
+throws
+----------------------------------
+JDBC -> Java DataBase Connectivity
+
+1. Register the driver
+2. create the connection
+3. Create the statements
+4. fire the query and handle the result
+5. close all
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

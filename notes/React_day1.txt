@@ -1,0 +1,52 @@
+React JS
+- open source javascript library
+- used to make SPA
+- developed by Facebook
+- uses Virtual DOM
+- jsx -> javascript xml / javascript extended
+- component based
+	-> functional
+		stateless components
+	-> class
+		stateful components
+		render()
+- tools to create react applications
+	- create-react-app (CRA)
+	- next.js
+	- vite
+
+- props
+	stands for properties
+	immutable
+
+- React component Life cycle
+	Mounting Phase
+	1. constructor
+	2. render
+	3. componentWillMount
+	4. componentDidMount
+
+	Update Phase
+	1. shouldComponentUpdate 
+	2. componentDidUpdate
+
+	Unmounting Phase
+	1. componentDidUnmount
+
+- React State
+	used to contain data or info about the component
+
+	is an in-built object of class Components
+	maintained using setState
+
+        is not available by default in functional components
+	the useState hook is used to maintain state in functional componenets
+
+- React Forms
+	Controlled Forms
+		- stores each input value in a React state
+		- sets the values to re-render
+	Uncontrolled Forms
+	
+	
+

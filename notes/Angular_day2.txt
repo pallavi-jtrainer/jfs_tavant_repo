@@ -1,0 +1,19 @@
+day 2:
+custom directives
+component life cycle
+dependency injection
+forms
+routing
+services
+---------------------------------------------------------
+Component Life cycle
+
+ngOnChanges
+ngOnInit
+ngDoCheck
+ngAfterContentInit
+ngAfterContentCheck
+ngAfterViewInit
+ngAfterViewChecked
+ngOnDestroy
+

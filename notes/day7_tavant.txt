@@ -1,0 +1,82 @@
+SDLC -> Software development Life Cycle
+
+Requirement Gathering and Analysis
+Design
+Development
+Testing
+Deployment
+Maintenance
+
+Models
+Waterfall
+Iterative
+Incremental
+Prototype
+Spiral
+V Model
+Agile
+===========================================================
+
+Agile
+-----
+Artifacts -> Product Backlog, sprint backlog, burn-up or burn-down chart
+Meetings -> Sprint Meeting, Daily Stand Up, sprint review, sprint retrospective
+Team
+===========================================================
+Software Architectures
+- explains a system's core ideas and characteristics.
+- determines fault tolerance, performance, scalability and dependability
+
+1. monolithic
+2. microservices
+3. client - server
+4. service oriented (SOA)
+5. event driven
+6. n tier
+7. microkernel
+8. broker
+9. event-bus
+10. pipe-filter
+===========================================================================================
+Maven
+ - build tool
+ - for Java in Java
+ - easy way to create an archive -> JAR and WAR
+ - POM.XML (Project Object Model)
+ - Repos
+	1. local repo
+	2. central repo
+	3. remote repo
+
+3 parts
+- Build life cycles
+	1. default
+	2. clean
+	3. site
+- phases
+	1. default lc
+		a. validate
+		b. compile
+		c. test
+		d. package
+		e. install
+		f. deploy
+	3. site
+		a. site
+		b. post-site
+		c. site-deploy
+- goals
+
+
+
+
+
+
+
+
+
+
+
+
+
+

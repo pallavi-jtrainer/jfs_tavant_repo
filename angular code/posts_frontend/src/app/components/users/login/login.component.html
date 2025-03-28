@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Welcome to Your Community</h3>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="loginForm.form.valid && onSubmit()" #loginForm="ngForm">
+        <div>
+          <label for="username">Username / Email:</label>
+          <input type="text" id="username" required
+          [(ngModel)]="form.username" name="username"
+          class="form-control" #username="ngModel">
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" required
+          [(ngModel)]="form.password" name="password"
+          class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary"
+        [disabled]="!loginForm.form.valid">Login</button>
+        <div>
+          <span>Not a Member? Please
+            <a href="#" class="link-success" routerLink="/register">Register/Sign Up</a>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
